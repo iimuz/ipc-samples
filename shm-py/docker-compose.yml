@@ -1,0 +1,14 @@
+version: '2'
+services:
+  dev:
+    image: iimuz/python-dev:v3.6.3-1.1.1
+    environment:
+      TZ: Asia/Tokyo
+      HTTP_PROXY: ${HTTP_PROXY}
+      http_proxy: ${HTTPS_PROXY}
+      HTTPS_PROXY: ${HTTP_PROXY}
+      https_proxy: ${HTTPS_PROXY}
+    volumes:
+      - ..:/home/dev/src/github.com/iimuz/ipc-samples:rw
+    working_dir: /home/dev/src/github.com/iimuz/ipc-samples/shm-py
+    entrypoint: bash

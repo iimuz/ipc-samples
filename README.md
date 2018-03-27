@@ -14,3 +14,9 @@ boostのinterprocessはヘッダオンリーですが、利用するにはlibrt�
 undefined reference to `shm_open'
 ```
 
+# python
+
+## shared memory(shm project)
+
+* test: ```python setup.py test```
+
