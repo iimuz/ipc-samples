@@ -32,6 +32,7 @@ namespace {
 /// @brief サーバーの起動と一定間隔でのデータ転送
 bool runServer_()
 {
+  unlink("/tmp/udsocket");
   basio::io_service service;
   basio::local::stream_protocol::endpoint ep("/tmp/udsocket");
   basio::local::stream_protocol::acceptor acceptor(service, ep);
